@@ -6,10 +6,54 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --animate-into-frame-bt: into-frame-bt 1s ease-in-out forwards;
+    --animate-into-frame-tb: into-frame-tb 1s ease-in-out forwards;
+    --animate-into-frame-lr: into-frame-lr 1s ease-in-out forwards;
+    --animate-into-frame-rl: into-frame-rl 1s ease-in-out forwards;
+
+    @keyframes into-frame-bt {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            transform: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes into-frame-tb {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            transform: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes into-frame-rl {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            transform: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes into-frame-lr {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            transform: 1;
+            transform: translateX(0);
+        }
+    }
 }
 
 @media (prefers-color-scheme: dark) {

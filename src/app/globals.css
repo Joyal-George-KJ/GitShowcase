@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-    --animate-into-frame-bt: into-frame-bt 1s ease-in-out forwards;
-    --animate-into-frame-tb: into-frame-tb 1s ease-in-out forwards;
-    --animate-into-frame-lr: into-frame-lr 1s ease-in-out forwards;
-    --animate-into-frame-rl: into-frame-rl 1s ease-in-out forwards;
+    --animate-bt: bottom-top 1s ease-in-out forwards;
+    --animate-tb: top-bottom 1s ease-in-out forwards;
+    --animate-lr: left-right 1s ease-in-out forwards;
+    --animate-rl: right-left 1s ease-in-out forwards;
 
-    @keyframes into-frame-bt {
+    @keyframes bottom-top {
         from {
             opacity: 0;
             transform: translateY(20px);
@@ -17,7 +17,7 @@
         }
     }
 
-    @keyframes into-frame-tb {
+    @keyframes top-bottom {
         from {
             opacity: 0;
             transform: translateY(-20px);
@@ -28,7 +28,7 @@
         }
     }
 
-    @keyframes into-frame-rl {
+    @keyframes right-left {
         from {
             opacity: 0;
             transform: translateX(20px);
@@ -39,7 +39,7 @@
         }
     }
 
-    @keyframes into-frame-lr {
+    @keyframes left-right {
         from {
             opacity: 0;
             transform: translateX(-20px);

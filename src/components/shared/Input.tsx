@@ -1,4 +1,8 @@
-export default function Input({type, placeholder, required = false} : Readonly<{type: string; placeholder: string; required: boolean}>) {
+export default function Input({
+    type,
+    placeholder,
+    required = false,
+}: Readonly<{ type: string; placeholder: string; required: boolean }>) {
     return (
         <input
             required={required}

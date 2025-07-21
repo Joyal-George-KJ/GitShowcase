@@ -1,12 +1,23 @@
-import { GithubIcon } from "lucide-react";
+import Image from 'next/image';
+import { useState } from 'react';
 
 export default function GitHub() {
+    const [hover, setHover] = useState(false);
     return (
         <button
             type="button"
-            className="flex cursor-pointer gap-4 justify-center font-bold w-full p-3 border border-neutral-700 bg-white hover:bg-neutral-200 text-black rounded"
+            aria-label="github auth"
+            className="flex items-center gap-2 w-full justify-center shadow shadow-gray-300 rounded-lg py-2 px-4 hover:text-black hover:bg-gray-300 transition"
+            onMouseOver={() => setHover((prev) => true)}
+            onMouseLeave={() => setHover((prev) => false)}
         >
-            <GithubIcon /> GitHub
+            <Image
+                src={hover ? '/github-mark.svg' : '/github-mark-white.svg'}
+                alt="google logo"
+                width={16}
+                height={16}
+            />{' '}
+            GitHub
         </button>
     );
 }

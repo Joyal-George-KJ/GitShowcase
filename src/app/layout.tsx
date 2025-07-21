@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'GitShowcase',
+    title: 'GitShowcase | Home',
     description:
         "GitShowcase is your space to highlight what you've built, share your journey, and stand out in the developer community",
 };

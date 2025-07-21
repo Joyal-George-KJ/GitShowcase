@@ -22,36 +22,57 @@ const Header = ({ isAuthenticated }: { isAuthenticated: boolean }) => {
             <nav className="flex gap-6 items-center">
                 {isAuthenticated ? (
                     <>
-                        <Link href="/projects" className={linkClasses('/projects')}>
+                        <Link
+                            href="/projects"
+                            className={linkClasses('/projects')}
+                        >
                             <Folder className="inline mr-2" size={18} />
                             Projects
                         </Link>
-                        <Link href="/profile" className={linkClasses('/profile')}>
+                        <Link
+                            href="/profile"
+                            className={linkClasses('/profile')}
+                        >
                             <User className="inline mr-2" size={18} />
                             Profile
                         </Link>
-                        <Link href="/settings" className={linkClasses('/settings')}>
+                        <Link
+                            href="/settings"
+                            className={linkClasses('/settings')}
+                        >
                             <Settings className="inline mr-2" size={18} />
                             Settings
                         </Link>
-                        <Link href="/messages" className={linkClasses('/messages')}>
+                        <Link
+                            href="/messages"
+                            className={linkClasses('/messages')}
+                        >
                             <Mail className="inline mr-2" size={18} />
                             Message
                         </Link>
-                        <Link href="/notifications" className={linkClasses('/notifications')}>
+                        <Link
+                            href="/notifications"
+                            className={linkClasses('/notifications')}
+                        >
                             <Bell className="inline mr-2" size={18} />
                             Notification
                         </Link>
                     </>
                 ) : (
                     <>
-                        <Link href="/projects" className={linkClasses('/projects')}>
+                        <Link
+                            href="/projects"
+                            className={linkClasses('/projects')}
+                        >
                             Projects
                         </Link>
                         <Link href="/login" className={linkClasses('/login')}>
                             Login
                         </Link>
-                        <Link href="/register" className={linkClasses('/register')}>
+                        <Link
+                            href="/register"
+                            className={linkClasses('/register')}
+                        >
                             Signup
                         </Link>
                     </>

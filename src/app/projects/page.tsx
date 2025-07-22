@@ -80,43 +80,6 @@ const Project = () => {
                 </select>
             </div>
 
-            {isLoggedIn && (
-                <div className="flex justify-end">
-                    <button
-                        onClick={handleToggleForm}
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white"
-                    >
-                        {showForm ? "Cancel" : "Add Project"}
-                    </button>
-                </div>
-            )}
-
-            {showForm && (
-                <form className="bg-neutral-800 p-6 rounded space-y-4">
-                    <input
-                        className="w-full p-3 rounded bg-neutral-900 text-white border border-neutral-600"
-                        placeholder="Project Title"
-                        required
-                    />
-                    <textarea
-                        className="w-full p-3 rounded bg-neutral-900 text-white border border-neutral-600"
-                        placeholder="Short Description"
-                        required
-                    />
-                    <input
-                        className="w-full p-3 rounded bg-neutral-900 text-white border border-neutral-600"
-                        placeholder="Tags (comma separated)"
-                        required
-                    />
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded"
-                    >
-                        Submit Project
-                    </button>
-                </form>
-            )}
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map((project) => (
                     <div key={project.id} className="bg-neutral-800 rounded-lg shadow overflow-hidden">

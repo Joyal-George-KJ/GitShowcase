@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import ProjectCard from "@/components/client/ProjectCard";
+import { ProjectType } from "@/types/ProjectTypes";
 
 const projects: ProjectType[] = [
     {

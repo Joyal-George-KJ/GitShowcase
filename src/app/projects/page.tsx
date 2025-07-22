@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const projects = [
+const projects: ProjectType[] = [
     {
         id: 1,
         title: "Portfolio Website",

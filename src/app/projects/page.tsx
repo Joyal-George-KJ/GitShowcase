@@ -56,11 +56,7 @@ const projects = [
 
 
 const Project = () => {
-    const [showForm, setShowForm] = useState(false);
     const [filter, setFilter] = useState("new");
-    const isLoggedIn = true; // Replace with auth check.
-
-    const handleToggleForm = () => setShowForm(!showForm);
 
     return (
         <div className="p-8 space-y-8 max-w-screen-xl mx-auto">

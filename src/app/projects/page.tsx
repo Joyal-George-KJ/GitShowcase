@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ProjectCard from "@/components/client/ProjectCard";
 import { ProjectType } from "@/types/ProjectTypes";
+import fetchData from "@/components/hooks/fetchData";
 
 const projects: ProjectType[] = [
     {
@@ -54,6 +55,10 @@ const projects: ProjectType[] = [
         image: "/vercel.svg",
     },
 ];
+
+const data = fetchData({url: 'http://localhost:3000', path: '/api', method: 'get'});
+
+console.log(data);
 
 
 const Project = () => {

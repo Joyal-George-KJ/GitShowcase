@@ -1,24 +1,17 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { databases } from '@/functions/appwrite';
+import { NextResponse } from 'next/server';
 
-export async function GET(req: NextRequest) {
-    const { searchParams } = req.nextUrl
+export async function GET() {
+	try {
+		const data = await databases.getDocument(
+			process.env.APPWRITE_DATABASE_ID!,
+			process.env.APPWRITE_COLLECTION_ID!,
+			'686bbf0800393943fefb'
+		);
 
-    const name = searchParams.get('name');
-    
-    // return NextResponse.json({ message: `Hello ${name}` })
-    return NextResponse.redirect(new URL('/', req.url))
-    
+		return NextResponse.json({ data });
+	} catch (error) {
+		console.error('Appwrite error:', error);
+		return NextResponse.json({ error: 'Failed to fetch document' }, { status: 500 });
+	}
 }
-
-export async function POST(req: NextRequest) {
-    console.log(req);
-    
-    return NextResponse.json({ message: `Hello World ${req?.body}` })
-}
-
-export async function PUT(req: NextRequest) {
-    console.log(req);
-    
-    return NextResponse.json({ message: `Hello World ${req?.body}` })
-}
-

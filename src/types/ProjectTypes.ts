@@ -14,3 +14,12 @@ export interface ProjectType {
     };
     image: string;
 };
+
+export interface FetchFuncPropType {
+    url: string;
+    path: string;
+    method: string;
+    options?: {
+        [key: string]: string;
+    }
+}
